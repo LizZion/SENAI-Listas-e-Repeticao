@@ -1,36 +1,24 @@
-alunos = []
-notasTemp = []
+aluno1 = [4,4,10,10]
+aluno2 = [9,8,7,6]
+aluno3 = [4,5,6,7]
+aluno4 = [7.5,9,5,8]
+aluno5 = [2,2,2,1]
+aluno6 = [6,8,7,7]
+aluno7 = [7,8,4,9]
+aluno8 = [10,10,10,10]
+aluno9 = [5,5,7,7]
+aluno10 = [5,6,4,3]
+alunos = [aluno1,aluno2,aluno3,aluno4,aluno5,aluno6,aluno7,aluno8,aluno9,aluno10]
 contagem = 1
 contagem2 = 0
-mediaTemp = 0
-contagem3 = 1
 final = ""
-for i in range(0,10):
-    if contagem == 1:
-        print("Insira a primeira nota:")
-        notasTemp.append(float(input()))
-        contagem += 1
-    if contagem == 2:
-        print("Insira a segunda nota:")
-        notasTemp.append(float(input()))
-        contagem += 1
-    if contagem == 3:
-        print("Insira a terceira nota:")
-        notasTemp.append(float(input()))
-        contagem += 1
-    if contagem == 4:
-        print("Insira a quarta nota:")
-        notasTemp.append(float(input()))
-        for i in notasTemp:
-            mediaTemp = mediaTemp + notasTemp[contagem2]
-            contagem2 += 1
-        mediaTemp = mediaTemp / 4
-        alunos.append(mediaTemp)
-        mediaTemp = 0
-        notasTemp = []
-        contagem2 = 0
-        contagem = 1
+media = 0
 for i in alunos:
-    final = f"{final} Aluno {contagem3} - {str(alunos[contagem3-1])} |"
-    contagem3 += 1
+    for nota in alunos[contagem2]:
+        media = media + nota 
+    media = media / len(alunos[contagem2])
+    if media >= 7:
+            final = f"{final} Aluno {contagem2+1} (Aprovado) - {media} |"
+    contagem2 += 1
+    media = 0
 print("Médias:", final)
