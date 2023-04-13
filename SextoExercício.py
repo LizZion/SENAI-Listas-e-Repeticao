@@ -9,16 +9,15 @@ aluno8 = [10,10,10,10]
 aluno9 = [5,5,7,7]
 aluno10 = [5,6,4,3]
 alunos = [aluno1,aluno2,aluno3,aluno4,aluno5,aluno6,aluno7,aluno8,aluno9,aluno10]
-contagem = 1
-contagem2 = 0
+contagem = 0
 final = ""
 media = 0
 for i in alunos:
-    for nota in alunos[contagem2]:
+    for nota in alunos[contagem]:
         media = media + nota 
-    media = media / len(alunos[contagem2])
+    media = media / len(alunos[contagem])
     if media >= 7:
-            final = f"{final} Aluno {contagem2+1} (Aprovado) - {media} |"
-    contagem2 += 1
+            final = f"{final} Aluno {contagem+1} (Aprovado) - {media} |"
+    contagem += 1
     media = 0
 print("Médias:", final)
