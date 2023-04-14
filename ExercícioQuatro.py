@@ -7,3 +7,4 @@ while pop_A < pop_B:
     pop_A += cresc_A
     pop_B += cresc_B
     anos += 1
+print(anos)
